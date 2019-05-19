@@ -45,22 +45,27 @@ public class MainTask {
 				}
 
 			} else if (option == 2) {
+				System.out.println("\nUpis promjene stanja zadatka:  ");
 				ManipulateTasks task2 = new ManipulateTasks();
 				task2.changeStatus(tasks);
 
 			} else if (option == 3) {
+				System.out.println("\nIzlistavanje svih zadataka:  ");
 				ManipulateTasks task3 = new ManipulateTasks();
 				task3.printAllTasks(tasks);
 
 			} else if (option == 4) {
+				System.out.println("\nIzlistavanje svih izvrsenih zadataka:  ");
 				ManipulateTasks task4 = new ManipulateTasks();
 				task4.printCompletedTasks(tasks);
 
 			} else if (option == 5) {
+				System.out.println("\nIzlistavanje svih neizvrsenih zadataka:  ");
 				ManipulateTasks task5 = new ManipulateTasks();
 				task5.printPendingTasks(tasks);
 
 			} else if (option == 6) {
+				System.out.println("\nBrisanje zadatka iz liste:  ");
 				ManipulateTasks task6 = new ManipulateTasks();
 				task6.deleteTask(tasks);
 				System.out.println("");

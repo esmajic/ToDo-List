@@ -7,7 +7,8 @@ public class CategoryHome extends Task {
 
 	@Override
 	public String toString() {
-		return "CategoryHome [getDescription()=" + getDescription() + ", isCompleted()=" + isCompleted() + "]";
+		return "CategoryHome [Opis zadatka =" + getDescription() + ", Da li je zadatak izvrsen? =" + isCompleted()
+				+ "]";
 	}
 
 }

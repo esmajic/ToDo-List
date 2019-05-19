@@ -8,7 +8,8 @@ public class CategoryWork extends Task {
 
 	@Override
 	public String toString() {
-		return "CategoryWork [getDescription()=" + getDescription() + ", isCompleted()=" + isCompleted() + "]";
+		return "CategoryWork [Opis zadatka =" + getDescription() + ", Da li je zadatak izvrsen? =" + isCompleted()
+				+ "]";
 	}
 
 }
