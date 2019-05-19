@@ -2,7 +2,8 @@ import java.util.ArrayList;
 
 public class CreateHouseTask {
 
-	public void createTask(ArrayList<Task> listaZadataka) {
+	public void createTask(ArrayList<Task> listaZadataka) throws Exception {
+		try {
 		System.out.println("\nUnesite opis zadatka:  ");
 		MainTask.input.nextLine();
 		String description = MainTask.input.nextLine();
@@ -13,6 +14,9 @@ public class CreateHouseTask {
 		listaZadataka.add(zadatak);
 
 		System.out.println("\nZadatak je uspjesno kreiran.");
+		}catch(Exception e) {
+			System.out.println("Unijeli ste krivu vrijednost. Vrijednost mora biti True ili False.");
+		}
 	}
 
 }

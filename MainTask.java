@@ -5,7 +5,7 @@ public class MainTask {
 
 	public static Scanner input = new Scanner(System.in);
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
 		Scanner input = new Scanner(System.in);
 
