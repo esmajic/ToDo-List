@@ -45,7 +45,7 @@ public class ManipulateTasks {
 			System.out.println("Ne mozete brisati jer je lista zadataka prazna.");
 		} else {
 			System.out.println("Unesite redni broj zadatka koji zelite izbrisati:  ");
-			int index = TestTask.input.nextInt();
+			int index = MainTask.input.nextInt();
 
 			for (int i = 0; i < tasks.size(); i++) {
 				if (index - 1 == i) {
@@ -62,7 +62,7 @@ public class ManipulateTasks {
 			System.out.println("Ne mozete oznaciti jer je lista zadataka prazna.");
 		} else {
 			System.out.println("Unesite redni broj zadatka koji zelite oznaciti uradjenim:  ");
-			int index = TestTask.input.nextInt();
+			int index = MainTask.input.nextInt();
 
 			for (int i = 0; i < tasks.size(); i++) {
 				if (index - 1 == i) {

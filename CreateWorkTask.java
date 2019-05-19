@@ -6,10 +6,10 @@ public class CreateWorkTask {
 		System.out.println("Unos opisa zadatka... ");
 		System.out.println("");
 		System.out.println("Unesite opis zadatka:  ");
-		TestTask.input.nextLine();
-		String description = TestTask.input.nextLine();
+		MainTask.input.nextLine();
+		String description = MainTask.input.nextLine();
 		System.out.println("Da li je zadatak izvrsen? true ili false:  ");
-		boolean completed = TestTask.input.nextBoolean();
+		boolean completed = MainTask.input.nextBoolean();
 		System.out.println("");
 
 		CategoryWork zadatak = new CategoryWork(description, completed);
