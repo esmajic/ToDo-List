@@ -10,6 +10,7 @@ public class MainTask {
 		Scanner input = new Scanner(System.in);
 
 		ArrayList<Task> tasks = new ArrayList<>();
+		ArrayList<Task> alltasks = new ArrayList<>();
 
 		int option;
 
@@ -17,10 +18,11 @@ public class MainTask {
 			System.out.println("\n==================================================");
 			System.out.println("Upisite 1 za unos zadatka");
 			System.out.println("Upisite 2 za upis promjene stanja zadatka");
-			System.out.println("Upisite 3 za izlistavanje svih zadataka");
+			System.out.println("Upisite 3 za izlistavanje svih aktivnih zadataka");
 			System.out.println("Upisite 4 za izlistavanje svih izvrsenih zadataka");
 			System.out.println("Upisite 5 za izlistavanje svih neizvrsenih zadataka");
 			System.out.println("Upisite 6 za brisanje zadatka iz liste");
+			System.out.println("Upisite 7 za izlistavanje svih kreiranih zadataka");
 			System.out.println("Upisite 0 za izlaz iz aplikacije");
 			System.out.println("==================================================");
 			System.out.println("\nMolimo, upisite zeljenu opciju:  ");
@@ -37,11 +39,12 @@ public class MainTask {
 				if (option2 == 1) {
 					System.out.println("\nKucni zadatak:  ");
 					CreateHouseTask task = new CreateHouseTask();
-					task.createTask(tasks);
+					task.createTask(tasks, alltasks);
+
 				} else if (option2 == 2) {
 					System.out.println("\nPoslovni zadatak:  ");
 					CreateWorkTask task = new CreateWorkTask();
-					task.createTask(tasks);
+					task.createTask(tasks, alltasks);
 				}
 
 			} else if (option == 2) {
@@ -52,7 +55,7 @@ public class MainTask {
 			} else if (option == 3) {
 				System.out.println("\nIzlistavanje svih zadataka:  ");
 				ManipulateTasks task3 = new ManipulateTasks();
-				task3.printAllTasks(tasks);
+				task3.printAllActiveTasks(tasks);
 
 			} else if (option == 4) {
 				System.out.println("\nIzlistavanje svih izvrsenih zadataka:  ");
@@ -68,7 +71,12 @@ public class MainTask {
 				System.out.println("\nBrisanje zadatka iz liste:  ");
 				ManipulateTasks task6 = new ManipulateTasks();
 				task6.deleteTask(tasks);
-				System.out.println("");
+
+			} else if (option == 7) {
+				System.out.println("\nBrisanje zadatka iz liste:  ");
+				ManipulateTasks task7 = new ManipulateTasks();
+				task7.printAllCreatedTasks(alltasks);
+
 			}
 
 		} while (option != 0);
