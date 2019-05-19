@@ -36,8 +36,11 @@ public class ManipulateTasks {
 			int index = MainTask.input.nextInt();
 
 			for (int i = 0; i < tasks.size(); i++) {
-				if (index - 1 == i) {
+				if (tasks.get(i).isCompleted() == false) {
+					System.out.println("Zadatak ne mozete obrisati jer zadatak nije izvrsen!");
+				} else if (index - 1 == i) {
 					tasks.remove(i);
+					System.out.println("Zadatak broj " + index + ". je izbrisan iz liste.");
 				}
 			}
 		}
@@ -55,8 +58,10 @@ public class ManipulateTasks {
 				if (index - 1 == i) {
 					if (tasks.get(i).isCompleted()) {
 						tasks.get(i).setCompleted(false);
+						System.out.println("Stanje zadatka je uspjesno promijenjeno u neizvrseni zadatak.");
 					} else {
 						tasks.get(i).setCompleted(true);
+						System.out.println("Stanje zadatka je uspjesno promijenjeno u izvrseni zadatak.");
 					}
 				}
 			}
@@ -64,7 +69,7 @@ public class ManipulateTasks {
 	}
 
 	public void printPendingTasks(ArrayList<Task> tasks) {
-		System.out.println("\nIspis svih neizvrsenih zadataka zadataka...");
+		System.out.println("\nIspis svih neizvrsenih zadataka...");
 		if (tasks.size() == 0) {
 			System.out.println("\nLista neizvrsenih zadataka je prazna.");
 		} else {
