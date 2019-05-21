@@ -30,30 +30,30 @@ public class MainTask {
 			option = input.nextInt();
 
 			if (option == 1) {
-				System.out.println("\n==============================");
-				System.out.println("Upisite 1 za kucni zadatak");
-				System.out.println("Upisite 2 za poslovni zadatak");
-				System.out.println("==============================");
+				System.out.println("\n=========================================");
+				System.out.println("Upisite 1 za kreiranje kucnog zadatka");
+				System.out.println("Upisite 2 za kreiranje poslovnog zadatka");
+				System.out.println("=========================================");
 				System.out.println("\nIzaberite opciju:  ");
 				int option2 = input.nextInt();
 				if (option2 == 1) {
-					System.out.println("\nKucni zadatak:  ");
+					System.out.println("\nProces kreiranje kucnog zadatka:  ");
 					CreateHouseTask task = new CreateHouseTask();
 					task.createTask(tasks, alltasks);
 
 				} else if (option2 == 2) {
-					System.out.println("\nPoslovni zadatak:  ");
+					System.out.println("\nProces kreiranje poslovnog zadatka:  ");
 					CreateWorkTask task = new CreateWorkTask();
 					task.createTask(tasks, alltasks);
 				}
 
 			} else if (option == 2) {
-				System.out.println("\nUpis promjene stanja zadatka:  ");
+				System.out.println("\nProces upisa promjene stanja zadatka:  ");
 				ManipulateTasks task2 = new ManipulateTasks();
 				task2.changeStatus(tasks);
 
 			} else if (option == 3) {
-				System.out.println("\nIzlistavanje svih zadataka:  ");
+				System.out.println("\nIzlistavanje svih aktivnih zadataka:  ");
 				ManipulateTasks task3 = new ManipulateTasks();
 				task3.printAllActiveTasks(tasks);
 
@@ -73,15 +73,13 @@ public class MainTask {
 				task6.deleteTask(tasks);
 
 			} else if (option == 7) {
-				System.out.println("\nIzlistavanje svih kreiranih zadataka7:  ");
+				System.out.println("\nIzlistavanje svih kreiranih zadataka (sortirani po datumu kreiranja):  ");
 				ManipulateTasks task7 = new ManipulateTasks();
 				task7.printAllCreatedTasks(alltasks);
 
 			}
 
 		} while (option != 0);
-		
-		 
 
 		System.out.println("Hvala na koristenju nase aplikacije.");
 

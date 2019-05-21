@@ -4,7 +4,6 @@ import java.util.Collections;
 public class ManipulateTasks {
 
 	public void printAllActiveTasks(ArrayList<Task> tasks) {
-		System.out.println("\nIspis svih zadataka...");
 		if (tasks.size() == 0) {
 			System.out.println("\nLista zadataka je prazna.");
 		} else {
@@ -15,7 +14,6 @@ public class ManipulateTasks {
 	}
 
 	public void printCompletedTasks(ArrayList<Task> tasks) {
-		System.out.println("\nIspis svih izvrsenih zadataka...");
 		if (numberOfCompletedTasks(tasks) == tasks.size()) {
 			System.out.println("\nLista izvrsenih zadataka je prazna.");
 		} else {
@@ -29,7 +27,6 @@ public class ManipulateTasks {
 	}
 
 	public void deleteTask(ArrayList<Task> tasks) {
-		System.out.println("\nBrisanje zadatka...");
 		if (tasks.size() == 0) {
 			System.out.println("\nNe mozete brisati jer je lista zadataka prazna.");
 		} else {
@@ -47,7 +44,6 @@ public class ManipulateTasks {
 	}
 
 	public void changeStatus(ArrayList<Task> tasks) {
-		System.out.println("\nOznacavanje zadatka zavrsenim...");
 		if (tasks.size() == 0) {
 			System.out.println("\nNe mozete oznaciti jer je lista zadataka prazna.");
 		} else {
@@ -69,7 +65,6 @@ public class ManipulateTasks {
 	}
 
 	public void printPendingTasks(ArrayList<Task> tasks) {
-		System.out.println("\nIspis svih neizvrsenih zadataka...");
 		if (tasks.size() == 0) {
 			System.out.println("\nLista neizvrsenih zadataka je prazna.");
 		} else {
@@ -93,7 +88,6 @@ public class ManipulateTasks {
 
 	public void printAllCreatedTasks(ArrayList<Task> alltasks) {
 		Collections.sort(alltasks);
-		System.out.println("\nIspis svih do sada kreiranih zadataka...");
 		if (alltasks.size() == 0) {
 			System.out.println("\nLista kreiranih zadataka je prazna.");
 		} else {
