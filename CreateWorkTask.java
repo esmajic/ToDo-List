@@ -8,8 +8,11 @@ public class CreateWorkTask {
 			String description = MainTask.input.nextLine();
 			System.out.println("\nDa li je zadatak izvrsen? true ili false:  ");
 			boolean completed = MainTask.input.nextBoolean();
+			MainTask.input.nextLine();
+			System.out.println("\nUpisite dan kreiranja zadatka (dd-MM-gggg):  ");
+			String creationDate = MainTask.input.nextLine();
 
-			CategoryWork zadatak = new CategoryWork(description, completed);
+			CategoryWork zadatak = new CategoryWork(description, completed, creationDate);
 			listaZadataka.add(zadatak);
 			listaSvihKreiranihZadataka.add(zadatak);
 

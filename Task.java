@@ -1,11 +1,15 @@
+
+
 public class Task {
 
 	private String description;
 	private boolean completed;
+	private String creationDate;
 
-	Task(String description, boolean completed) {
+	Task(String description, boolean completed, String creationDate) {
 		this.description = description;
 		this.completed = completed;
+		this.creationDate = creationDate;
 	}
 
 	public String getDescription() {
@@ -24,9 +28,18 @@ public class Task {
 		this.completed = completed;
 	}
 
+	public String getCreationDate() {
+		return creationDate;
+	}
+
+	public void setCreationDate(String creationDate) {
+		this.creationDate = creationDate;
+	}
+
 	@Override
 	public String toString() {
-		return "List [description=" + description + ", completed=" + completed + "]";
+		return "Task [Opis zadatka =" + description + ", Da li je zadatak izvrsen? = " + completed
+				+ ", Datum kreiranja zadatka =" + creationDate + "]";
 	}
 
 }
