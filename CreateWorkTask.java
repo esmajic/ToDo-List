@@ -1,4 +1,6 @@
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class CreateWorkTask {
 
@@ -8,9 +10,11 @@ public class CreateWorkTask {
 			String description = MainTask.input.nextLine();
 			System.out.println("\nDa li je zadatak izvrsen? true ili false:  ");
 			boolean completed = MainTask.input.nextBoolean();
+			SimpleDateFormat myFormat = new SimpleDateFormat("dd-MM-yyyy");
 			MainTask.input.nextLine();
 			System.out.println("\nUpisite dan kreiranja zadatka (dd-MM-gggg):  ");
-			String creationDate = MainTask.input.nextLine();
+			String creationDate1 = MainTask.input.nextLine();
+			Date creationDate = myFormat.parse(creationDate1);
 
 			CategoryWork zadatak = new CategoryWork(description, completed, creationDate);
 			listaZadataka.add(zadatak);

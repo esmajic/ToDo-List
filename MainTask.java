@@ -73,13 +73,15 @@ public class MainTask {
 				task6.deleteTask(tasks);
 
 			} else if (option == 7) {
-				System.out.println("\nBrisanje zadatka iz liste:  ");
+				System.out.println("\nIzlistavanje svih kreiranih zadataka7:  ");
 				ManipulateTasks task7 = new ManipulateTasks();
 				task7.printAllCreatedTasks(alltasks);
 
 			}
 
 		} while (option != 0);
+		
+		 
 
 		System.out.println("Hvala na koristenju nase aplikacije.");
 

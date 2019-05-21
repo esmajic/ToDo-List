@@ -1,12 +1,12 @@
+import java.util.Date;
 
-
-public class Task {
+public class Task implements Comparable <Task>{
 
 	private String description;
 	private boolean completed;
-	private String creationDate;
+	private Date creationDate;
 
-	Task(String description, boolean completed, String creationDate) {
+	Task(String description, boolean completed, Date creationDate) {
 		this.description = description;
 		this.completed = completed;
 		this.creationDate = creationDate;
@@ -28,18 +28,20 @@ public class Task {
 		this.completed = completed;
 	}
 
-	public String getCreationDate() {
+	public Date getCreationDate() {
 		return creationDate;
 	}
 
-	public void setCreationDate(String creationDate) {
+	public void setCreationDate(Date creationDate) {
 		this.creationDate = creationDate;
 	}
 
-	@Override
-	public String toString() {
-		return "Task [Opis zadatka =" + description + ", Da li je zadatak izvrsen? = " + completed
-				+ ", Datum kreiranja zadatka =" + creationDate + "]";
-	}
+	 @Override
+	  public int compareTo(Task k) {
+	    if (getCreationDate() == null || k.getCreationDate() == null) {
+	      return 0;
+	    }
+	    return getCreationDate().compareTo(k.getCreationDate());
+	  }
 
 }

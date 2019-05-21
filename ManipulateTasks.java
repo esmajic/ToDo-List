@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ManipulateTasks {
 
@@ -91,6 +92,7 @@ public class ManipulateTasks {
 	}
 
 	public void printAllCreatedTasks(ArrayList<Task> alltasks) {
+		Collections.sort(alltasks);
 		System.out.println("\nIspis svih do sada kreiranih zadataka...");
 		if (alltasks.size() == 0) {
 			System.out.println("\nLista kreiranih zadataka je prazna.");
